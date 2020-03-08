@@ -1,11 +1,13 @@
-<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 23.3035L10 16.3035L13 19.3035L24.5 8.30347" stroke="#023DA2" stroke-width="2"/>
-<path d="M29 3.80344L28.437 12.1085L20.562 4.67033L29 3.80344Z" fill="#023DA2"/>
-<path d="M21 27.8035V16.3035L20 17.3035V27.8035" stroke="#023DA2"/>
-<path d="M24 27.8035V13.3035L23 14.3035V27.8035" stroke="#023DA2"/>
-<path d="M18 27.8035V19.3035L17 20.3035V27.8035" stroke="#023DA2"/>
-<path d="M15 27.8035V21.8035L14 22.8035V27.8035" stroke="#023DA2"/>
-<path d="M11 27.8035V21.8035L12 22.8035V27.8035" stroke="#023DA2"/>
-<path d="M9 27.8035V21.8035L8 22.8035V27.8035" stroke="#023DA2"/>
-<path d="M6 27.8035V24.8035L5 25.8035V27.8035" stroke="#023DA2"/>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="">
+<path d="M3 23.3035L10 16.3035L13 19.3035L24.5 8.30347" stroke="white" stroke-width="2"/>
+<path d="M21.6986 5.05618L28.461 4.36144L28.0099 11.0172L21.6986 5.05618Z" fill="white" stroke="white"/>
+<path d="M21 27.8035V16.3035L20 17.3035V27.8035" stroke="white"/>
+<path d="M24 27.8035V13.3035L23 14.3035V27.8035" stroke="white"/>
+<path d="M18 27.8035V19.3035L17 20.3035V27.8035" stroke="white"/>
+<path d="M15 27.8035V21.8035L14 22.8035V27.8035" stroke="white"/>
+<path d="M11 27.8035V21.8035L12 22.8035V27.8035" stroke="white"/>
+<path d="M9 27.8035V21.8035L8 22.8035V27.8035" stroke="white"/>
+<path d="M6 27.8035V24.8035L5 25.8035V27.8035" stroke="white"/>
+</g>
 </svg>
