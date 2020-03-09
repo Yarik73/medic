@@ -7,4 +7,3 @@ navToggle.addEventListener('click', function() {
    pageToggle.classList.toggle('page-active');
 });
 
-console.log('hello');

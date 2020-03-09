@@ -56,7 +56,7 @@ function imgTask() {
 }
 
 function fontTask() {
-    return src('.src/fonts/*.{ttf, woff, woff2, svg, otf}')
+    return src('./src/fonts/*.{ttf,woff,woff2,svg,otf,eot}')
         .pipe(plumber())
         .pipe(dest('./dist/fonts'))
         .pipe(connect.reload());
