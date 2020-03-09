@@ -1,0 +1,16 @@
+.user {
+  position: absolute;
+  top: 34px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.user__title {
+  margin-right: 20px;
+}
+
+.user__link {
+  width: 50px;
+  height: 50px;
+}

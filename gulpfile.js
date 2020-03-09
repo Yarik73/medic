@@ -55,11 +55,19 @@ function imgTask() {
         .pipe(connect.reload());
 }
 
+function fontTask() {
+    return src('.src/fonts/*.{ttf, woff, woff2, svg, otf}')
+        .pipe(plumber())
+        .pipe(dest('./dist/fonts'))
+        .pipe(connect.reload());
+}
+
 function watchTask() {
     watch('./src/html/*.html', series(htmlTask));
     watch('./src/scss/**/*.scss', series(cssTask));
     watch('./src/js/*.js', series(jsTask));
     watch('./src/img/**', series(imgTask));
+    watch('./src/fonts/**', series(fontTask));
 }
 
-exports.default = parallel(connectTask, htmlTask, cssTask, imgTask, jsTask, watchTask);
+exports.default = parallel(connectTask, htmlTask, cssTask, imgTask, fontTask, jsTask, watchTask);

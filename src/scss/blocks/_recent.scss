@@ -1,0 +1,30 @@
+.recent__item {
+  position: relative;
+  max-width: 340px;
+  width: 100%;
+  min-height: 160px;
+  padding: 30px 25px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  color: $black;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.recent__img-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  right: 20px;
+  width: 86px;
+  height: 86px;
+}
+
+.recent__img {
+  width: 20px;
+  height: 20px;
+}
