@@ -73,14 +73,13 @@
         </nav>
 
         <main class="home-page page-active">
-            <div class="user">
+            <section class="user">
                 <h4 class="user__title">С. П. Иванов</h4>
                 <a class="user__link" href="#">
-                    <img src="img/user.svg" width="50px" height="50px" alt="user">
                 </a>
-            </div>
+            </section>
 
-            <div class="home-page__header">
+            <section class="home-page__header">
 
                 <div class="home-page__links">
                     <a class="home-page__link home-page__link--active" href="#">Недавние</a>
@@ -92,22 +91,242 @@
                     <div class="home-page__arrow-left"></div>
                 </div>
 
-            </div>
+            </section>
 
-            <div class="home-page__content recent">
+            <section class="home-page__content recent">
                 <div class="recent__list">
 
                     <div class="recent__item">
-                        <div class="recent__img-wrap">
-                            <img class="recent__img" src="img/N4.svg" alt="N4">
-                        </div>
+                        <span class="recent__number">
+                            N4
+                        </span>
                         <h4 class="recent__title">Справка о реализации</h4>
                         <div class="recent__data">сегодня, <span>10:45</span></div>
                         <div class="recent__description">Развитие детсткого здравоохранения</div>
                     </div>
 
+                    <div class="recent__item">
+                        <span class="recent__number">N4</span>
+                        <h4 class="recent__title">Отчёт о финансовом обеспечении</h4>
+                        <div class="recent__data">сегодня, <span>10:00</span></div>
+                        <div class="recent__description">Развитие детсткого здравоохранения</div>
+                    </div>
+
+                    <div class="recent__item">
+                        <span class="recent__number">N2</span>
+                        <h4 class="recent__title">Отчёт по контрольным точкам</h4>
+                        <div class="recent__data">20 ноября, <span>10:45</span></div>
+                        <div class="recent__description">Борба с сердечно-сосудистыми заболеваниями</div>
+                    </div>
+
+                    <div class="recent__item">
+                        <span class="recent__number">N4-76</span>
+                        <h4 class="recent__title">Справка о реализации</h4>
+                        <div class="recent__data">20 ноября, <span>8:45</span></div>
+                        <div class="recent__description">Развитие детского здравоохранения: Ярославская область</div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="home-page__projects projects">
+
+                <div class="projects__header">
+                    <h3 class="projects__title">Мои проекты</h3>
+                    <div class="projects__nav">
+                        <a class="projects__nav-link projects__nav-link--active">Результаты</a>
+                        <a href="#" class="projects__nav-link">Контрольные точки</a>
+                        <a href="#" class="projects__nav-link">Финансы</a>
+                    </div>
+                </div>
+
+                <div class="projects__sort">
+                    
+                    <div class="projects__sort-item">
+                        <div class="projects__sort-title">Проекты</div>
+                        <select class="projects__select">
+                            <option class="select__option">Федеральные</option>
+                        </select>
+                    </div>
+
+                    <div class="projects__sort-item">
+                        <div class="projects__sort-title">Нацпроект</div>
+                        <select class="projects__select">
+                            <option class="select__option">Здравоохранение</option>
+                        </select>
+                    </div>
+
+                    <div class="projects__sort-item">
+                        <div class="projects__sort-title">Период</div>
+                        <select class="projects__select">
+                            <option class="projects__select-option">2019</option>
+                        </select>
+                    </div>
+
+                    <div class="projects__sort-item projects__sort-item--end">
+                        <div class="projects__sort-title">Сортировка</div>
+                        <select class="projects__select">
+                            <option class="projects__select-option">По отклонениям</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="projects__list">
+                    <div class="projects__item projects__item--border-red">
+                        <span class="projects__number">N4</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Развитие детского здравоохранения</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--red">63%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">5 из 8</div>
+                                </div>
+                            </div>
+                            <div class="projects__results-right">
+                                <div class="projects__results-timeWrap">
+                                    <span>2</span>
+                                    <span class="projects__results-time">
+                                        <img class="projects__results-timeImg" src="img/clock.svg" alt="clock">
+                                    </span>
+                                </div>
+                                <div class="projects__results-cancel">
+                                    <div class="projects__results-cancelWrap">
+                                        <span>1</span>
+                                        <span class="projects__results-canceled"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__item projects__item--border-red">
+                        <span class="projects__number">N2</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Борьба с сердечно-сосудистыми заболеваниями</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--red">50%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">6 из 12</div>
+                                </div>
+                            </div>
+                            <div class="projects__results-right">
+                                <div class="projects__results-timeWrap">
+                                    <span>2</span>
+                                    <span class="projects__results-time">
+                                        <img class="projects__results-timeImg" src="img/clock.svg" alt="clock">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__item projects__item--border-orange">
+                        <span class="projects__number">N1</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Развитие системы оказания первичной медико-санитарной помощи</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--orange">86%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">12 из 14</div>
+                                </div>
+                            </div>
+                            <div class="projects__results-right">
+                                <div class="projects__results-timeWrap">
+                                    <span>1</span>
+                                    <span class="projects__results-time">
+                                        <img class="projects__results-timeImg" src="img/clock.svg" alt="clock">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__item projects__item--border-green">
+                        <span class="projects__number">N8</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Развитие экспорта медицинских услуг</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--green">40%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">2 из 5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__item projects__item--border-green">
+                        <span class="projects__number">N7</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Создание единого цифрового контура в здравоохранении на основе ЕГИСЗ</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--green">57%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">5 из 7</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__item projects__item--border-green">
+                        <span class="projects__number">N5</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Обеспеч. медицинских организаций системы здравоохранения ...</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--green">90%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">9 из 10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__item projects__item--border-green">
+                        <span class="projects__number">N3</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Борьба с онкологическими заболеваниями</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--green">63%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">5 из 8</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__item projects__item--border-green">
+                        <span class="projects__number">N6</span>
+                        <div class="project__subtitle">Здравоохранение</div>
+                        <h4 class="project__title">Развитие сети нац. медицинских исследовательских центров</h4>
+                        <div class="projects__results">
+                            <div class="projects__results-left">
+                                <div class="projects__results-box projects__results-box--green">63%</div>
+                                <div class="projects__results-wrap">
+                                    <div class="projects__results-title">Результаты</div>
+                                    <div class="projects__results__progress">5 из 8</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </section>
 
 
         </main>

@@ -1,9 +1,20 @@
+.recent {
+  margin-bottom: 50px;
+}
+
+.recent__list {
+  display: flex;
+}
+
 .recent__item {
+  display: flex;
+  flex-direction: column;
   position: relative;
   max-width: 340px;
   width: 100%;
   min-height: 160px;
-  padding: 30px 25px;
+  margin-right: 20px;
+  padding: 38px 20px 25px;
   font-size: 14px;
   line-height: 19px;
   font-weight: 500;
@@ -11,20 +22,39 @@
   background-color: $white;
   border-radius: 4px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 
-.recent__img-wrap {
+.recent__number {
   position: absolute;
-  display: flex;
-  justify-content: flex-end;
   top: 0;
   right: 20px;
-  width: 86px;
-  height: 86px;
+  font-family: "DIN Condensed", sans-serif;
+  font-size: 53px;
+  line-height: 40px;
+  font-weight: bold;
+  color: $light-grey;
+  text-transform: uppercase;
 }
 
-.recent__img {
-  width: 20px;
-  height: 20px;
+.recent__title {
+  margin-bottom: 1px;
+  font-family: "DIN", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: $black;
+}
+
+.recent__data {
+  opacity: 0.5;
+  flex-grow: 1;
+}
+
+.recent__description {
+  opacity: 0.5;
 }
