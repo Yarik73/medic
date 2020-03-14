@@ -4,6 +4,7 @@
 
 .recent__list {
   display: flex;
+  justify-content: space-between;
 }
 
 .recent__item {
@@ -13,7 +14,6 @@
   max-width: 340px;
   width: 100%;
   min-height: 160px;
-  margin-right: 20px;
   padding: 38px 20px 25px;
   font-size: 14px;
   line-height: 19px;

@@ -4,11 +4,11 @@
 }
 
 .main-nav__left {
+  display: flex;
+  flex-direction: column;
   width: 90px;
   background-color: $blue;
   padding: 50px 30px 30px;
-  z-index: 100;
-  //test
 }
 
 .main-nav__toggle {
@@ -37,6 +37,20 @@
   }
 }
 
+.main-nav__toggle-arrow {
+  position: absolute;
+  top: 100px;
+  left: 391px;
+  width: 38px;
+  height: 38px;
+  font-size: 0;
+  background: $white url("../img/arrow-left.svg") no-repeat 13px center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+
 .main-nav__link {
   width: 32px;
   height: 32px;
@@ -55,6 +69,17 @@
   &--bottom {
     margin-top: 300px;
   }
+
+  &--active {
+    position: relative;
+
+    &:before {
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .main-nav__link-img {
@@ -66,14 +91,11 @@
   left: 90px;
   width: 0;
   background-color: $white;
-  transform: translateX(-100%);
   transition: 0.2s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav--opened .main-nav__right {
   width: 320px;
-  transform: translateX(0%);
 }
 
 .main-nav__title {
@@ -122,3 +144,6 @@
   }
 }
 
+.main-nav.main-nav--opened {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

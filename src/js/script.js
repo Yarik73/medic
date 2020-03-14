@@ -7,3 +7,7 @@ navToggle.addEventListener('click', function() {
    pageToggle.classList.toggle('page-active');
 });
 
+
+$(document).ready(function() {
+   $(".js-example-basic-single").select2();
+});

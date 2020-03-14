@@ -39,6 +39,8 @@ function cssTask() {
 
 function jsTask() {
     return src([
+        './node_modules/jquery/dist/jquery.min.js',
+        './src/js/select2.min.js',
         './src/js/script.js',
     ])
         .pipe(plumber())
