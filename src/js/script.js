@@ -15,5 +15,7 @@ navToggleArrow.addEventListener('click', function () {
 
 
 $(document).ready(function() {
-   $(".select2_example").select2();
+   $(".js-example-theme-single").select2({
+        theme: 'my_select',
+   });
 });

@@ -1,0 +1,65 @@
+.select2-container--my_select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  outline: none;
+  font-family: "DIN", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: $grey;
+  border-radius: 4px;
+}
+
+.select2-container .select2-selection--single {
+  height: auto;
+}
+
+.select2-selection--single {
+  padding: 0 100px 0 12px;
+  box-shadow: none !important;
+  height: 36px !important;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  transition: all .2s;
+}
+
+.select2-selection--single .select2-selection__rendered {
+  position: relative;
+  top: 7px;
+  padding: 0 !important;
+}
+
+.select2-selection__arrow {
+  position: absolute;
+  right: 15px;
+  top: 38%;
+  line-height: 1;
+}
+
+.select2-selection--single .select2-selection__arrow b {
+  display: block;
+  width: 12px;
+  height: 9px;
+  opacity: 0.6;
+  background: url("../img/arrow_down.svg") no-repeat center center;
+}
+
+.dropdown-wrapper {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border: 0;
+  padding: 5px 0;
+  z-index: 1151;
+  line-height: 1.25;
+}
+
+
+
+
+
+
+

@@ -39,7 +39,7 @@ function cssTask() {
 
 function jsTask() {
     return src([
-        './node_modules/jquery/dist/jquery.min.js',
+        './src/js/jquery-3.4.1.min.js',
         './src/js/select2.min.js',
         './src/js/script.js',
     ])
