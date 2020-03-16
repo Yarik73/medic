@@ -23,10 +23,10 @@ $(document).ready(function() {
 
    // Слайдер
     $('.multiple-items').slick({
-        infinite: true,
-        dots: true,
+        infinite: false,
+        dots: false,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
     });
 
 
