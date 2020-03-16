@@ -16,23 +16,19 @@ navToggleArrow.addEventListener('click', function () {
 
 $(document).ready(function() {
 
-   // Стилизация select
+   // select
    $(".js-example-theme-single").select2({
         theme: 'my_select',
    });
 
    // Слайдер
-   $('.recent__list').owlCarousel({
-      loop:true,
-      nav:false,
-      responsiveClass:true,
-      responsive:{
-         0:{
-            items:4,
-            dots:true,
-         },
-      }
-   });
+    $('.multiple-items').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+
 
 });
 
