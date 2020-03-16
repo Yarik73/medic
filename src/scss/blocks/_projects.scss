@@ -68,24 +68,21 @@
 .projects__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 0 -10px;
 }
 
 .projects__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin: 0 10px 20px;
   position: relative;
   width: calc(100% / 10 * 2  - 10px);
+  min-width: 340px;
   height: 240px;
   padding: 38px 25px 30px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 4px;
-
-  &:nth-child(4n + 4) {
-    margin-right: 0;
-  }
 
   &--border-red:before {
     content: "";
@@ -131,7 +128,6 @@
   @media (max-width: 1160px) {
     width: calc(100% / 10 * 5  - 10px);
   }
-
 }
 
 .projects__number {
