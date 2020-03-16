@@ -1,3 +1,4 @@
+// Боковое выезжающее меню
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var pageToggle = document.querySelector('.home-page');
@@ -13,9 +14,28 @@ navToggleArrow.addEventListener('click', function () {
    pageToggle.classList.toggle('page-active');
 });
 
-
 $(document).ready(function() {
+
+   // Стилизация select
    $(".js-example-theme-single").select2({
         theme: 'my_select',
    });
+
+   // Слайдер
+   $('.recent__list').owlCarousel({
+      loop:true,
+      nav:false,
+      responsiveClass:true,
+      responsive:{
+         0:{
+            items:4,
+            dots:true,
+         },
+      }
+   });
+
 });
+
+
+
+
