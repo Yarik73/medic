@@ -1,14 +1,26 @@
 .main-nav__wrap {
   display: flex;
   overflow: hidden;
+  height: 100%;
 }
 
 .main-nav__left {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 90px;
   background-color: $blue;
   padding: 50px 30px 30px;
+}
+
+.main-nav__left-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__left-bottom {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-nav__toggle {
@@ -70,10 +82,6 @@
 
   &:hover {
     opacity: 1;
-  }
-
-  &--bottom {
-    margin-top: 300px;
   }
 
   &--active {
