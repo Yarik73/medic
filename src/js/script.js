@@ -6,12 +6,12 @@ var navToggleArrow = document.querySelector('.main-nav__toggle-arrow');
 
 navToggle.addEventListener('click', function() {
    navMain.classList.toggle('main-nav--opened');
-   pageToggle.classList.toggle('page-active');
+   pageToggle.classList.toggle('home-page--active');
 });
 
 navToggleArrow.addEventListener('click', function () {
    navMain.classList.toggle('main-nav--opened');
-   pageToggle.classList.toggle('page-active');
+   pageToggle.classList.toggle('home-page--active');
 });
 
 $(document).ready(function() {
@@ -27,6 +27,7 @@ $(document).ready(function() {
         dots: false,
         slidesToShow: 4,
         slidesToScroll: 1,
+        draggable: false,
     });
 
 
