@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  min-width: 326px;
   margin-right: 20px;
   height: 160px;
   padding: 38px 20px 25px;
@@ -62,6 +63,10 @@
 // recent-slider
 .recent-slider {
   position: relative;
+}
+
+.recent-slider .slick-track{
+  display: flex;
 }
 
 .recent-slider .slick-arrow {

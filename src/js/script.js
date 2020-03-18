@@ -22,12 +22,31 @@ $(document).ready(function() {
    });
 
    // Слайдер
-    $('.multiple-items').slick({
+    $('.responsive').slick({
         infinite: false,
-        dots: false,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
+        dots: false,
         draggable: false,
+        responsive: [
+            {
+                breakpoint: 1700,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 1360,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+        ]
+
     });
 
 
