@@ -3,8 +3,8 @@
 @import "global/page";
 
 @import "../js/select2.min";
-@import "global/slick";
-@import "global/slick-theme";
+@import "../js/owl.carousel.min";
+@import "../js/owl.theme.default.min";
 
 @import "blocks/main-nav";
 @import "blocks/content-wrap";
@@ -13,3 +13,5 @@
 @import "blocks/recent";
 @import "blocks/projects";
 @import "blocks/select";
+@import "blocks/myProject-page";
+@import "blocks/federal-projects";

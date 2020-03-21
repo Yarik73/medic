@@ -1,0 +1,116 @@
+.myProject-page__header {
+  margin-bottom: 50px;
+}
+
+.myProject-page__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myProject-page__link-left {
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+.myProject-page__link-right {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  padding: 5px 15px 8px;
+  background-color: $blue;
+  border-radius: 4px;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &:active[href] {
+    color: $black;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+.myProject-page__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+}
+
+.myProject-page__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  min-width: 340px;
+  background-color: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  //test
+  height: 205px;
+
+  &:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(136, 186, 230, 0.18);
+    border-radius: 5px;
+    transition: all 2s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.myProject-page__number {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 53px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: $light-grey;
+}
+
+.myProject-page__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.myProject-page__title {
+  flex-grow: 1;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $black;
+}
+
+.myProject-page__footer {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #535353;
+}

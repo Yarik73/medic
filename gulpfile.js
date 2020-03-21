@@ -7,7 +7,7 @@ const concat = require('gulp-concat');
 const rename = require("gulp-rename");
 const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const autoprefixer = require('gulp-autoprefixer');
 
 
@@ -41,18 +41,18 @@ function jsTask() {
     return src([
         './src/js/jquery-3.4.1.min.js',
         './src/js/select2.min.js',
-        './src/js/slick.min.js',
+        './src/js/owl.carousel.min.js',
         './src/js/script.js',
     ])
         .pipe(plumber())
         .pipe(concat('app.js'))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(dest('./dist/js'))
         .pipe(connect.reload());
 }
 
 function imgTask() {
-    return src('./src/img/*.{jpg,png,svg,gif}')
+    return src('./src/img/**/*.{jpg,png,svg,gif}')
         .pipe(imagemin())
         .pipe(dest('./dist/img'))
         .pipe(connect.reload());

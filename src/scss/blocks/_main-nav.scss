@@ -3,6 +3,7 @@
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
+  z-index: 100;
 }
 
 .main-nav__wrap {
@@ -72,6 +73,10 @@
   opacity: 0;
   transition: 0.2s;
   pointer-events: none;
+
+  &:hover {
+    background-color: $light-grey;
+  }
 }
 
 .main-nav.main-nav--opened .main-nav__toggle-arrow {
@@ -88,10 +93,6 @@
   margin-bottom: 25px;
   opacity: 0.4;
   transition: .2s;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &:hover {
     opacity: 1;
