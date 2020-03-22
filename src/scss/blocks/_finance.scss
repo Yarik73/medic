@@ -1,0 +1,115 @@
+.finance__left {
+  width: 37%;
+  margin-right: 20px;
+}
+
+.finance__title {
+  margin-bottom: 30px;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+.finance__budget {
+  margin-bottom: 20px;
+  padding: 30px;
+  background: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.finance__budget-title {
+  margin-bottom: 25px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $black;
+}
+
+.finance__budget-wrap {
+  display: inline-block;
+  width: 200px;
+}
+
+.finance__total-budget,
+.finance__federal-budget {
+  margin-bottom: 10px;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+
+.finance__obj {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.finance__text {
+  display: block;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #535353;
+}
+
+.finance__project {
+  padding: 30px;
+  background: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.finance__project-wrap {
+  margin-bottom: 45px;
+  display: flex;
+}
+
+.finance__project-text {
+  margin-right: 20px;
+  display: inline-block;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #535353;
+  
+  &:before {
+    content: "";
+    margin-right: 9px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.14);
+    border-radius: 50%;
+  }
+
+  &:nth-last-child(1):before {
+    background-color: $blue;
+  }
+}
+
+.finance__project-schedule {
+  width: 100%;
+  //test
+  height: 500px;
+}
+
+
+
+

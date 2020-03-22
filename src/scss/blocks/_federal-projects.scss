@@ -75,15 +75,12 @@
 .federal-projects__users-list {
   display: flex;
   position: relative;
-
-  &--hidden {
-    display: none;
-  }
 }
 
 .federal-projects__users-wrap {
   display: flex;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .federal-projects__user {
@@ -161,5 +158,60 @@
     border-right: 0;
     transform: rotate(-225deg);
     opacity: 0.8;
+    transition: 0.2s;
   }
 }
+
+.federal-projects__users-wrap.federal-projects__users-wrap--hidden .federal-projects__users-list {
+  display: none;
+}
+
+.federal-projects__users-wrap.federal-projects__users-wrap--hidden .federal-projects__users-btn:after {
+  top: -2px;
+  transform: rotate(-45deg);
+}
+
+.federal-projects__tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.federal-projects__tabs-wrap {
+  width: 100%;
+}
+
+.federal-projects__tabs-items {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 -50px 50px;
+  padding: 0 50px;
+}
+
+.federal-projects__tabs-item {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: $black;
+  opacity: 0.5;
+  padding: 20px 0;
+  margin-right: 40px;
+
+  &--active {
+    color: $blue;
+    border-bottom: 3px solid $blue;
+    opacity: 1;
+  }
+}
+
+.federal-projects__tabs-block {
+  display: none;
+}
+
+.federal-projects__tabs-block:target {
+  display: block;
+}
+
+
+
+

@@ -1,33 +1,16 @@
-// Боковое выезжающее меню
-let navMain = document.querySelector('.main-nav');
-let navToggle = document.querySelector('.main-nav__toggle');
-let pageToggle = document.querySelector('.home-page');
-let navToggleArrow = document.querySelector('.main-nav__toggle-arrow');
-
-navToggle.addEventListener('click', function() {
-   navMain.classList.toggle('main-nav--opened');
-   pageToggle.classList.toggle('home-page--active');
-});
-
-navToggleArrow.addEventListener('click', function () {
-   navMain.classList.toggle('main-nav--opened');
-   pageToggle.classList.toggle('home-page--active');
-});
-
-
-// Показать/скрыть federal-projects__users-list
-let usersList = document.querySelector('.federal-projects__users-list');
-let btnToggle = document.querySelector('.federal-projects__users-btn');
-
-btnToggle.addEventListener('click', function () {
-   usersList.classList.toggle('federal-projects__users-list--hidden');
-});
-
-
-
-
-
 $(document).ready(function() {
+
+   //Боковое выезжающее меню
+   $('.main-nav__toggle').on('click', function () {
+      $('.main-nav').toggleClass('main-nav--opened');
+      $('.home-page').toggleClass('home-page--active');
+   });
+
+   $('.main-nav__toggle-arrow').on('click', function () {
+      $('.main-nav').toggleClass('main-nav--opened');
+      $('.home-page').toggleClass('home-page--active');
+   });
+
 
    // Максимальная ширина item
    function getSize() {
@@ -43,13 +26,20 @@ $(document).ready(function() {
 
       $(window).resize(getSize);
    }
-   getSize();
+
+
+   // Показать/скрыть federal-projects__users-list
+   $('.federal-projects__users-btn').on('click', function () {
+      $('.federal-projects__users-wrap').toggleClass('federal-projects__users-wrap--hidden');
+      $(this).text($(this).text() == 'развернуть' ? 'свернуть' : 'развернуть');
+   });
 
 
    // select
    $(".js-example-theme-single").select2({
         theme: 'my_select',
    });
+
 
    // Слайдер
    $('.recent__list').owlCarousel({
@@ -78,9 +68,42 @@ $(document).ready(function() {
             items: 5,
          }
       }
-   })
-});
+   });
 
+
+   //Charts
+   window.onload = function () {
+
+      var options = {
+         title: {
+            text: ""
+         },
+
+         data: [{
+            type: "column",
+            yValueFormatString: "#,###",
+            indexLabel: "{y}",
+            color: "#546BC1",
+            dataPoints: [
+               { label: "Home", y: 196 },
+               { label: "Gallery", y: 263 },
+               { label: "Dashboards", y: 134 },
+               { label: "Docs", y: 216 },
+               { label: "Support", y: 174 },
+               { label: "Blog", y: 122 },
+               { label: "Others", y: 182 }
+            ]
+         }]
+      };
+      $("#chartContainer").CanvasJSChart(options);
+   };
+
+
+
+
+   getSize();
+
+});
 
 
 

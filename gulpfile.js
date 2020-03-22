@@ -40,6 +40,7 @@ function cssTask() {
 function jsTask() {
     return src([
         './src/js/jquery-3.4.1.min.js',
+        './src/js/jquery.canvasjs.min.js',
         './src/js/select2.min.js',
         './src/js/owl.carousel.min.js',
         './src/js/script.js',
