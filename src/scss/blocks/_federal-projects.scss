@@ -181,6 +181,8 @@
 }
 
 .federal-projects__tabs-items {
+  list-style: none;
+  display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0 -50px 50px;
   padding: 0 50px;
@@ -204,13 +206,6 @@
   }
 }
 
-.federal-projects__tabs-block {
-  display: none;
-}
-
-.federal-projects__tabs-block:target {
-  display: block;
-}
 
 
 

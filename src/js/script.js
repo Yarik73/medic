@@ -41,6 +41,20 @@ $(document).ready(function() {
    });
 
 
+   //Табы
+   let tab = $('#tabs .federal-projects__tabs-body > div');
+   tab.hide().filter(':first').show();
+
+   // Клики по вкладкам.
+   $('#tabs .federal-projects__tabs-item').click(function(){
+      tab.hide();
+      tab.filter(this.hash).show();
+      $('#tabs .federal-projects__tabs-item').removeClass('active');
+      $(this).addClass('active');
+      return false;
+   }).filter(':first').click();
+   
+
    // Слайдер
    $('.recent__list').owlCarousel({
       loop: false,
@@ -71,7 +85,7 @@ $(document).ready(function() {
    });
 
 
-   //Charts
+   //График
    window.onload = function () {
 
       var options = {
