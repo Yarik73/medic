@@ -144,6 +144,12 @@
                         <li><a href="#tab_4" class="federal-projects__tabs-item">План достижения</a></li>
                         <li><a href="#tab_5" class="federal-projects__tabs-item">Регионы</a></li>
                     </ul>
+
+                    <div class="federal-projects__load">
+                        <div class="federal-projects__passport">Паспорт проекта</div>
+                        <div class="federal-projects__PDF">Выгрузить в PDF</div>
+                    </div>
+
                     <div class="federal-projects__tabs-body">
 
                         <div id="tab_1" class="federal-projects__tabs-block finance">
@@ -164,24 +170,127 @@
 
                                     <div class="finance__project">
                                         <div class="finance__budget-title">Финансирование проекта, млн &#8381;</div>
-
                                         <div class="finance__project-wrap">
                                             <div class="finance__project-text">План</div>
                                             <div class="finance__project-text">Факт/Прогноз исполнения</div>
                                         </div>
-
                                         <div class="finance__project-schedule" id="chartContainer"></div>
-
                                     </div>
-
-
-
-
-
                                 </div>
 
                                 <div class="finance__right">
+                                    <div class="finance__right-row1">
+                                        <div class="finance__right-wrap">
+                                            <div class="finance__budget-title">Финансирование проекта в 2019</div>
+                                            <a href="#" class="finance__report">Финансовый отчет</a>
+                                        </div>
+                                        <div class="finance__budget-wrap">
+                                            <div class="finance__total-budget">11 872,7<span class="finance__obj">млн &#8381;</span></div>
+                                            <span class="finance__text">Предусмотрено паспортом</span>
+                                        </div>
+                                        <div class="finance__budget-wrap">
+                                            <div class="finance__total-budget">11 872,7<span class="finance__obj">млн &#8381;</span></div>
+                                            <span class="finance__text">Бюджетных ассигнаций</span>
+                                        </div>
+                                    </div>
+                                    <div class="finance__right-row2">
+                                        <div class="finance__budget-title">Распределение бюджета в 2019</div>
+                                        <div class="finance__right-chart1">
+                                            <div class="finance__chartContainer1" id="chartContainer2"></div>
+                                            <div class="finance__table">
+                                                <table class="finance__table-wrap">
+                                                    <tbody>
+                                                        <tr class="finance__table-row">
+                                                            <td class="finance__table-item"></td>
+                                                            <td class="finance__table-item">Доля в структуре*</td>
+                                                            <td class="finance__table-item">Риски</td>
+                                                            <td class="finance__table-item">Бюджет, млн &#8381;</td>
+                                                        </tr>
+                                                        <tr class="finance__table-row">
+                                                            <td class="finance__table-item">
+                                                                <span class="finance__table-circle finance__table-circle--orange"></span>
+                                                                Федеральный бюджет
+                                                            </td>
+                                                            <td class="finance__table-item"><b>1,2%</b></td>
+                                                            <td class="finance__table-item finance__table-item--risk">5</td>
+                                                            <td class="finance__table-item"><b>140</b></td>
+                                                        </tr>
+                                                        <tr class="finance__table-row">
+                                                            <td class="finance__table-item">
+                                                                <span class="finance__table-circle"></span>
+                                                                Государственны внебюджетные фонды
+                                                            </td>
+                                                            <td class="finance__table-item">0%</td>
+                                                            <td class="finance__table-item">0</td>
+                                                            <td class="finance__table-item">0</td>
+                                                        </tr>
+                                                        <tr class="finance__table-row">
+                                                            <td class="finance__table-item">
+                                                                <span class="finance__table-circle finance__table-circle--blue"></span>
+                                                                Консолидированные бюджеты РФ
+                                                            </td>
+                                                            <td class="finance__table-item"><b>98,8%</b></td>
+                                                            <td class="finance__table-item finance__table-item--risk">200</td>
+                                                            <td class="finance__table-item"><b>11 730</b></td>
+                                                        </tr>
+                                                        <tr class="finance__table-row">
+                                                            <td class="finance__table-item">
+                                                                <span class="finance__table-circle"></span>
+                                                                Внебюджетные источники
+                                                            </td>
+                                                            <td class="finance__table-item">0%</td>
+                                                            <td class="finance__table-item">0</td>
+                                                            <td class="finance__table-item">0</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
 
+                                                <span class="finance__table-star">*с учетом МБТ</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="finance__budget-title">Кассовое исполнение в 2019</div>
+                                        <div class="finance__right-chart2">
+                                            <div class="finance__chartContainer3" id="chartContainer3">
+                                                <div id="doughnutContainer"></div>
+                                                <div id="doughnutContainer1"></div>
+                                                <div class="finance__chartContainer3-item">57%</div>
+                                            </div>
+                                            <div class="finance__table2">
+                                                <table class="finance__table2-wrap">
+                                                    <tbody>
+                                                        <tr class="finance__table2-row">
+                                                            <td class="finance__table2-item">
+                                                                <span class="finance__table2-circle finance__table2-circle--orange"></span>
+                                                                6 768
+                                                                <span class="finance__table2-mln">млн &#8381;</span></td>
+                                                            <td class="finance__table2-item">
+                                                                <span class="finance__table2-circle finance__table2-circle--grey"></span>
+                                                                7 306
+                                                                <span>млн &#8381;</span></td>
+                                                            <td class="finance__table2-item">11 872,7 <span>млн &#8381;</span></td>
+                                                            <td class="finance__table2-item finance__table2-item--red">4 567 <span>млн &#8381;</span></td>
+                                                        </tr>
+                                                        <tr class="finance__table2-row">
+                                                            <td class="finance__table2-item">Фактическое</td>
+                                                            <td class="finance__table2-item">Ожидаемое</td>
+                                                            <td class="finance__table2-item">Общий план</td>
+                                                            <td class="finance__table2-item">Риск</td>
+                                                        </tr>
+                                                        <tr class="finance__table2-row">
+                                                            <td class="finance__table2-item finance__table2-item--orange">57%</td>
+                                                            <td class="finance__table2-item">63%</td>
+                                                            <td class="finance__table2-item"></td>
+                                                            <td class="finance__table2-item"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>

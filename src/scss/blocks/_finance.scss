@@ -1,3 +1,7 @@
+.finance__wrap {
+  display: flex;
+}
+
 .finance__left {
   width: 37%;
   margin-right: 20px;
@@ -49,6 +53,7 @@
 
 
 .finance__obj {
+  margin-left: 5px;
   font-family: "DIN", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -107,8 +112,247 @@
 .finance__project-schedule {
   width: 100%;
   //test
-  height: 500px;
+  height: 293px;
 }
+
+.finance__right {
+  padding: 30px;
+  width: 63%;
+  background: $white;
+  border-radius: 4px;
+}
+
+.finance__right-row1 {
+  margin-bottom: 60px;
+}
+
+.finance__right-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.finance__report {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: $blue;
+  align-self: flex-start;
+
+  &:after {
+    content: "";
+    position: relative;
+    right: -10px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 2px solid $blue;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+.finance__right-chart1 {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.finance__chartContainer1 {
+  width: 110px;
+  height: 110px;
+  margin-right: 40px;
+}
+
+.finance__table {
+  flex: 1;
+}
+.finance__table-wrap {
+  margin-top: -50px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.finance__table-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  &:first-child {
+    border-bottom: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.finance__table-item {
+  position: relative;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 6px 24px 7px 0;
+  text-align: right;
+
+  &--risk {
+    color: $red;
+  }
+}
+
+.finance__table-circle {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: -20px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+
+  &--orange {
+    background-color: $orange;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
+}
+
+.finance__table-star {
+  display: block;
+  margin-top: 13px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+  opacity: 0.5;
+}
+
+.finance__table-wrap .finance__table-row:first-child td {
+  padding-bottom: 24px;
+}
+
+.finance__table-wrap .finance__table-row .finance__table-item b {
+  color: $black;
+}
+
+.finance__table .finance__table-row .finance__table-item:first-child {
+  text-align: left;
+}
+
+.finance__table .finance__table-row .finance__table-item:last-child {
+  padding-right: 0;
+}
+
+.finance__right-chart2 {
+  padding-top: 15px;
+  display: flex;
+}
+
+.finance__chartContainer3 {
+  width: 110px;
+  height: 110px;
+  margin-right: 40px;
+  position: relative;
+  top: -15px;
+}
+
+#doughnutContainer, #doughnutContainer1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1 !important;
+}
+#doughnutContainer {
+  width: 110px;
+  height: 110px;
+}
+#doughnutContainer1 {
+  top: 18%;
+  width: 70px;
+  height: 70px;
+}
+
+.canvasjs-chart-tooltip {
+  z-index: 100000  !important;
+}
+
+.finance__chartContainer3-item {
+  position: absolute;
+  top: 43px;
+  right: 34px;
+  z-index: 1;
+}
+
+.finance__table2 {
+  flex: 1;
+}
+
+.finance__table2-wrap {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.finance__table2-item {
+  padding: 3px 0;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+
+  &--orange {
+    color: $orange;
+  }
+
+  &--red {
+    color: $red;
+  }
+}
+
+.finance__table2-circle {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+
+  &--orange {
+    background-color: $orange;
+  }
+
+  &--grey {
+    background-color: #C4C4C4;
+  }
+}
+
+.finance__table2-wrap .finance__table2-row:first-child .finance__table2-item {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #000000;
+}
+
+.finance__table2-wrap .finance__table2-row:first-child .finance__table2-item--red {
+  color: $red;
+}
+
+.finance__table2-wrap .finance__table2-row:first-child .finance__table2-item span {
+  font-size: 14px;
+}
+
+
+
+
+
+
+
 
 
 

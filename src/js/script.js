@@ -26,6 +26,7 @@ $(document).ready(function() {
 
       $(window).resize(getSize);
    }
+   getSize();
 
 
    // Показать/скрыть federal-projects__users-list
@@ -53,7 +54,7 @@ $(document).ready(function() {
       $(this).addClass('active');
       return false;
    }).filter(':first').click();
-   
+
 
    // Слайдер
    $('.recent__list').owlCarousel({
@@ -85,37 +86,106 @@ $(document).ready(function() {
    });
 
 
-   //График
-   window.onload = function () {
+   // chart1
+   $("#chartContainer").CanvasJSChart({
+          data: [{
+             type: "column",
+             dataPoints: [
+                { x: 10, y: 171 },
+                { x: 20, y: 155},
+                { x: 30, y: 150 },
+                { x: 40, y: 165 },
+                { x: 50, y: 195 },
+                { x: 60, y: 168 },
+                { x: 70, y: 128 },
+                { x: 80, y: 134 },
+                { x: 90, y: 114}
+             ]
+          },
+             {
+                type: "column",
+                dataPoints: [
+                   { x: 10, y: 71 },
+                   { x: 20, y: 55},
+                   { x: 30, y: 50 },
+                   { x: 40, y: 65 },
+                   { x: 50, y: 95 },
+                   { x: 60, y: 68 },
+                   { x: 70, y: 28 },
+                   { x: 80, y: 34 },
+                   { x: 90, y: 14}
+                ]
+             }
+          ]
+       });
 
-      var options = {
-         title: {
-            text: ""
+
+   // chart2
+      $("#chartContainer2").CanvasJSChart({
+         width: 110,
+         height: 110,
+         data: [
+            {
+               type: "doughnut",
+               startAngle:  300,
+               radius: '100%',
+               innerRadius: '80%',
+               dataPoints: [
+                  {y: 98.8, color: '#023DA2'},
+                  {y: 0.0},
+                  {y: 1.2, color: '#F69952'},
+                  {y: 0.0}
+               ]
+            }
+         ]
+      });
+
+
+      //chart3
+   $("#doughnutContainer").CanvasJSChart({
+      data: [
+         {
+            type: "doughnut",
+            startAngle:  270,
+            radius: '100%',
+            innerRadius: '80%',
+            dataPoints: [
+               { y: 57, color: '#F69952' },
+               { y: 43, color: 'transparent'},
+            ]
          },
 
-         data: [{
-            type: "column",
-            yValueFormatString: "#,###",
-            indexLabel: "{y}",
-            color: "#546BC1",
+      ]
+   });
+   $("#doughnutContainer1").CanvasJSChart({
+      backgroundColor: "transparent",
+      data: [
+         {
+            type: "doughnut",
+            startAngle:  270,
+            radius: '100%',
+            innerRadius: '70%',
             dataPoints: [
-               { label: "Home", y: 196 },
-               { label: "Gallery", y: 263 },
-               { label: "Dashboards", y: 134 },
-               { label: "Docs", y: 216 },
-               { label: "Support", y: 174 },
-               { label: "Blog", y: 122 },
-               { label: "Others", y: 182 }
+               { y: 63, color: '#C4C4C4' },
+               { y: 37, color: 'transparent'},
             ]
-         }]
-      };
-      $("#chartContainer").CanvasJSChart(options);
-   };
+         }
+      ]
+   });
+
+   $("#doughnutContainer1").hover(function(){
+          $("#doughnutContainer .canvasjs-chart-tooltip").hide();
+       }
+   );
+
+   $("#doughnutContainer").hover(function(){
+          $("#doughnutContainer1 .canvasjs-chart-tooltip").hide();
+       }
+   );
 
 
 
 
-   getSize();
 
 });
 
