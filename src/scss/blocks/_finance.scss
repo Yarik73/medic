@@ -109,10 +109,26 @@
   }
 }
 
+.finance__project-numbers tbody tr {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: $blue;
+}
+
+.finance__project-numbers tbody tr:last-child {
+  color: $dark-grey;
+  opacity: 0.5;
+}
+
+.finance__project-numbers tbody tr td {
+  padding: 0 4px;
+}
+
 .finance__project-schedule {
   width: 100%;
-  //test
-  height: 293px;
 }
 
 .finance__right {
@@ -160,14 +176,20 @@
 }
 
 .finance__chartContainer1 {
-  width: 110px;
-  height: 110px;
+  width: 95px;
+  height: 95px;
   margin-right: 40px;
+}
+
+.finance__right-chart1 .finance__chartContainer1 canvas {
+  width: 95px;
+  height: 95px;
 }
 
 .finance__table {
   flex: 1;
 }
+
 .finance__table-wrap {
   margin-top: -50px;
   font-family: "DIN", sans-serif;
@@ -194,7 +216,6 @@
 
 .finance__table-item {
   position: relative;
-  //border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px 24px 7px 0;
   text-align: right;
 
@@ -253,37 +274,21 @@
 }
 
 .finance__chartContainer3 {
-  width: 110px;
-  height: 110px;
-  margin-right: 40px;
   position: relative;
-  top: -15px;
+  width: 95px;
+  height: 95px;
+  margin-right: 40px;
 }
 
-#doughnutContainer, #doughnutContainer1 {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 1 !important;
-}
-#doughnutContainer {
-  width: 110px;
-  height: 110px;
-}
-#doughnutContainer1 {
-  top: 18%;
-  width: 70px;
-  height: 70px;
-}
-
-.canvasjs-chart-tooltip {
-  z-index: 100000  !important;
+.finance__chartPie {
+  width: 95px;
+  height: 95px;
 }
 
 .finance__chartContainer3-item {
   position: absolute;
-  top: 43px;
-  right: 34px;
+  top: 36px;
+  right: 28px;
   z-index: 1;
 }
 

@@ -1,0 +1,261 @@
+.control__wrap {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.control__title {
+  margin-bottom: 30px;
+}
+
+.control__select {
+  max-width: 150px;
+  width: 100%;
+  position: absolute;
+  top: 109px;
+  right: 0;
+}
+
+.control__select .select2-container--my_select {
+  min-width: 150px;
+}
+
+.control__wrap {
+  padding: 30px;
+  background: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.control__left {
+  width: 55%;
+  margin-right: 100px;
+}
+
+.control__chart {
+  width: 100%;
+  height: 185px;
+}
+
+.control__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control__head-num {
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+.control__head-num span {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.control__head-text {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+}
+
+.control__list {
+  display: flex;
+}
+
+.control__item {
+  position: relative;
+  margin-right: 56px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: -37px;;
+    display: inline-block;
+    width: 26px;
+    height: 3px;
+    border-bottom: 1px dashed $dark-grey;
+  }
+
+  &--performance:before {
+    border-bottom: 3px solid $blue;
+  }
+
+  &--excess:before {
+    border-bottom: 3px solid $light-green;
+  }
+
+  &--lag:before {
+    border-bottom: 3px solid $red;
+  }
+
+}
+
+.control__right {
+  width: 45%;
+}
+
+.control__table {
+  width: 100%;
+}
+
+.control__table-row {
+  display: flex;
+}
+
+.control__table-col {
+  width: 33.3333%;
+  padding-right: 65px;
+}
+
+.control__table-row:nth-child(1),
+.control__table-row:nth-child(3) {
+  margin-bottom: 10px;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+.control__table-row:nth-child(2),
+.control__table-row:nth-child(4) {
+  margin-bottom: 40px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+}
+
+.control__table-col span {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+
+.control__table-col--expired {
+  color: $orange;
+
+  &:after {
+    content: "";
+    position: relative;
+    right: -4px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: $orange url("../img/clock.svg") no-repeat 50% 48%;
+  }
+}
+
+.control__table-col--notReached {
+  color: $red;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    right: -4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: $red url("../img/Close.svg") no-repeat 50% 48%;
+  }
+}
+
+.control__link {
+  margin-right: 110px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: $blue;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    right: -10px;
+    width: 7px;
+    height: 7px;
+    border: 2px solid $blue;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+.control__risks-head {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.control__risks-title {
+  margin-right: 35px;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+.control__risks-num {
+  margin-right: 17px;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 42px;
+  color: $red;
+
+  &:after {
+    content: "";
+    position: relative;
+    right: -4px;
+    display: inline-block;
+    width: 26px;
+    height: 21px;
+    background: url("../img/danger.svg") no-repeat center center;
+  }
+}
+
+.control__risks-statistic {
+  width: 100px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: $black;
+}
+
+

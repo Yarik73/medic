@@ -1,0 +1,190 @@
+.regions__head {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.regions__title {
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+.regions__links {
+  margin-right: 10px;
+}
+
+.regions__link {
+  margin-right: 30px;
+  right: 6px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: $blue;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    right: -6px;
+    width: 7px;
+    height: 7px;
+    border: 2px solid $blue;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+.regions-wrap {
+  display: flex;
+}
+
+.regions__left {
+  margin-right: 40px;
+  padding: 30px 40px 30px 30px;
+  height: fit-content;
+  width: 12%;
+  background: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.regions__item {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
+  &--risk {
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 4px;
+      left: 25px;
+      width: 24px;
+      height: 22px;
+      background: url("../img/danger.svg") no-repeat center center;
+    }
+  }
+}
+
+.regions__num {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 28px;
+  color: $black;
+}
+
+.regions__item span {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.regions__text {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+}
+
+.regions__right {
+  width: 88%;
+}
+
+.regions__right-title {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.regions__right-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.regions__indicators {
+  margin-left: 10px;
+  display: flex;
+}
+
+.regions__indicator-wrap {
+  margin-right: 35px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+}
+
+.regions__indicator {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+
+  &--green {
+    border: 1px solid #11D677;
+    background-color: rgba(17, 214, 119, 0.6);
+  }
+
+  &--orange {
+    border: 1px solid #F69952;
+    background-color: rgba(246, 153, 82, 0.6);
+  }
+
+  &--pink {
+    border: 1px solid #EC515B;;
+    background-color: rgba(236, 81, 91, 0.6);
+  }
+}
+
+.regions__options {
+  display: flex;
+}
+
+.regions__select {
+  margin-right: 6px;
+  width: 220px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--year {
+    width: 150px;
+  }
+}
+
+.regions__map-wrap {
+  padding: 15px;
+}
+
+.regions__map {
+  width: 100%;
+}

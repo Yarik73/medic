@@ -111,38 +111,28 @@
 }
 
 .recent__list .owl-prev:before,
-.recent__list .owl-prev:after,
-.recent__list .owl-next:before,
-.recent__list .owl-next:after {
+.recent__list .owl-next:before {
   content: "";
   position: absolute;
   width: 10px;
-  height: 2px;
-  background-color: $black;
+  height: 10px;
+  border: 2px solid $black;
+  border-top: 0;
+  border-right: 0;
   transition: 0.2s;
 }
 
 .recent__list .owl-prev:before {
-  transform: rotate(-45deg);
-  top: 15px;
-  right: 12px;
-}
-
-.recent__list .owl-prev:after {
+  top: 14px;
+  left: 16px;
   transform: rotate(45deg);
-  top: 21px;
-  right: 12px;
 }
 
 .recent__list .owl-next:before {
-  transform: rotate(45deg);
-  top: 15px;
-  right: 12px;
+  top: 14px;
+  left: 11px;
+  transform: rotate(-135deg);
 }
 
-.recent__list .owl-next:after {
-  transform: rotate(-45deg);
-  top: 21px;
-  right: 12px;
-}
+
 

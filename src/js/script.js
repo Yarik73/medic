@@ -87,107 +87,228 @@ $(document).ready(function() {
 
 
    // chart1
-   $("#chartContainer").CanvasJSChart({
-          data: [{
-             type: "column",
-             dataPoints: [
-                { x: 10, y: 171 },
-                { x: 20, y: 155},
-                { x: 30, y: 150 },
-                { x: 40, y: 165 },
-                { x: 50, y: 195 },
-                { x: 60, y: 168 },
-                { x: 70, y: 128 },
-                { x: 80, y: 134 },
-                { x: 90, y: 114}
-             ]
-          },
-             {
-                type: "column",
-                dataPoints: [
-                   { x: 10, y: 71 },
-                   { x: 20, y: 55},
-                   { x: 30, y: 50 },
-                   { x: 40, y: 65 },
-                   { x: 50, y: 95 },
-                   { x: 60, y: 68 },
-                   { x: 70, y: 28 },
-                   { x: 80, y: 34 },
-                   { x: 90, y: 14}
+    if ($('#chart-bar').length) {
+        function chartBar() {
+
+            const ctx = $("#chart-bar");
+
+            //bar chart data
+            const data = {
+                labels: ["2019", "2020", "2021", "2022", "2023", "2023"],
+                datasets: [
+                    {
+                        label: false,
+                        data: [250, 480, 399, 440, 380, 360],
+                        backgroundColor: [
+                            "#023DA2",
+                            "#023DA2",
+                            "#023DA2",
+                            "#023DA2",
+                            "#023DA2",
+                            "#023DA2"
+                        ],
+                    },
+                    {
+                        label: "TeamB Score",
+                        data: [360, 397, 390, 440, 380, 360],
+                        backgroundColor: [
+                            "rgba(0, 0, 0, 0.14)",
+                            "rgba(0, 0, 0, 0.14)",
+                            "rgba(0, 0, 0, 0.14)",
+                            "rgba(0, 0, 0, 0.14)",
+                            "rgba(0, 0, 0, 0.14)",
+                            "rgba(0, 0, 0, 0.14)",
+                        ],
+                    }
                 ]
-             }
-          ]
-       });
+            };
+
+            const options = {
+                responsive: true,
+                title: {
+                    display: false,
+                },
+                legend: {
+                    display: false,
+                },
+                tooltips: {
+                    enabled: false,
+                },
+                scales: {
+                    yAxes: [
+                        {
+                            position: 'right',
+                            gridLines: {
+                                drawBorder: false,
+                                color: 'rgba(0,0,0,0.05)',
+                            },
+                            ticks: {
+                                min: 0,
+                                maxTicksLimit: 5,
+                                padding: 15,
+                                fontSize: 14,
+                                fontFamily: 'DIN',
+                                fontColor: 'rgba(83,83,83,0.5)'
+                            }
+                        }
+                    ],
+                    xAxes: [
+                        {
+                            gridLines: {
+                                lineWidth: 0,
+                                zeroLineWidth: 0,
+                                tickMarkLength: 14,
+                            },
+                            ticks: {
+                                autoSkip: true,
+                                autoSkipPadding: true,
+                                fontSize: 14,
+                                fontFamily: 'DIN',
+                                fontColor: '#000',
+                            }
+                        }
+                    ]
+                }
+            };
+
+            const chart = new Chart(ctx, {
+                type: "bar",
+                data: data,
+                options: options
+            });
+        }
+        chartBar();
+    }
 
 
-   // chart2
-      $("#chartContainer2").CanvasJSChart({
-         width: 110,
-         height: 110,
-         data: [
-            {
-               type: "doughnut",
-               startAngle:  300,
-               radius: '100%',
-               innerRadius: '80%',
-               dataPoints: [
-                  {y: 98.8, color: '#023DA2'},
-                  {y: 0.0},
-                  {y: 1.2, color: '#F69952'},
-                  {y: 0.0}
-               ]
+
+    // chart2
+    if ($('#chartPie1').length) {
+        function chartPie1 () {
+            const getPie1 = $('#chartPie1');
+
+            const dataPie1 = {
+                labels: ['blue', 'orange', 'green', 'yellow'],
+                datasets: [
+                    {
+                        label: false,
+                        data: [95, 5, 0, 0],
+                        backgroundColor: [
+                            '#023DA2',
+                            '#F69952'
+                        ]
+                    }
+                ]
+            };
+
+            const optionsPie1 = {
+                legend: {
+                    display: false,
+                },
+                aspectRatio: 1,
+                cutoutPercentage: 75,
+                layout: {
+                    padding: 0
+                },
+                tooltips: {
+                    enabled: false
+                }
+            };
+
+            const pie1 = new Chart(getPie1, {
+                type: 'doughnut',
+                data: dataPie1,
+                options: optionsPie1
+            })
+
+        }
+        chartPie1();
+    }
+
+
+
+    // chart3
+    if ($('#pieChart2').length) {
+        function chartPie2() {
+            const getPie2 = $('#pieChart2');
+
+            const dataPie2 = {
+                labels: ['orange'],
+                datasets: [
+                    {
+                        data: [65],
+                        label: false,
+                        backgroundColor: ['#F69952']
+                    },
+                    {
+                        data: [70],
+                        label: false,
+                        backgroundColor: ['#C4C4C4'],
+                    }
+                ]
+            };
+
+            const optionPie2 = {
+                legend: { display: false },
+                aspectRatio: 1,
+                tooltips: { enabled: false }
+            };
+
+            const pie2 = new Chart(getPie2, {
+                type: 'doughnut',
+                data: dataPie2,
+                options: optionPie2
+            })
+        }
+        chartPie2();
+    }
+
+
+    // chart 4
+    if ($('#chart4').length) {
+        const chart = new Chart($('#chart4'), {
+            type: 'line',
+            data: {
+                labels: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                datasets: [
+                    {
+                        data: [1, 1.3, 1.5, 1.7, 1.9, 2.1, 2.2, 2.5, 3.1, 3.2, 3.3, 3.5],
+                        borderColor: 'blue',
+                        backgroundColor: 'blue',
+                        fill: false,
+                        label: false,
+                        lineTension: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                tooltips: { enabled: false },
+                legend: { display: false},
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        },
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontSize: 12
+                        },
+                        gridLines: {
+                            display: false,
+                        }
+                    }]
+                }
             }
-         ]
-      });
-
-
-      //chart3
-   $("#doughnutContainer").CanvasJSChart({
-      data: [
-         {
-            type: "doughnut",
-            startAngle:  270,
-            radius: '100%',
-            innerRadius: '80%',
-            dataPoints: [
-               { y: 57, color: '#F69952' },
-               { y: 43, color: 'transparent'},
-            ]
-         },
-
-      ]
-   });
-   $("#doughnutContainer1").CanvasJSChart({
-      backgroundColor: "transparent",
-      data: [
-         {
-            type: "doughnut",
-            startAngle:  270,
-            radius: '100%',
-            innerRadius: '70%',
-            dataPoints: [
-               { y: 63, color: '#C4C4C4' },
-               { y: 37, color: 'transparent'},
-            ]
-         }
-      ]
-   });
-
-   $("#doughnutContainer1").hover(function(){
-          $("#doughnutContainer .canvasjs-chart-tooltip").hide();
-       }
-   );
-
-   $("#doughnutContainer").hover(function(){
-          $("#doughnutContainer1 .canvasjs-chart-tooltip").hide();
-       }
-   );
-
-
-
-
+        })
+    }
 
 });
+
+
+
 
 
 
