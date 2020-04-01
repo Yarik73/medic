@@ -23,10 +23,9 @@ $(document).ready(function() {
       const columnsMyProject = Math.floor($('.myProject-page__list').width() / (itemMinWidth + gutterSize));
       const itemMyProjectWidth = ($('.myProject-page__list').width() - columnsMyProject * gutterSize) / columnsMyProject;
       $('.myProject-page__item').css('max-width', `${itemMyProjectWidth}px`);
-
-      $(window).resize(getSize);
    }
    getSize();
+   $(window).resize(getSize);
 
 
    // Показать/скрыть federal-projects__users-list
@@ -202,6 +201,7 @@ $(document).ready(function() {
             };
 
             const optionsPie1 = {
+                responsive: true,
                 legend: {
                     display: false,
                 },
@@ -249,6 +249,7 @@ $(document).ready(function() {
             };
 
             const optionPie2 = {
+                responsive: true,
                 legend: { display: false },
                 aspectRatio: 1,
                 tooltips: { enabled: false }
