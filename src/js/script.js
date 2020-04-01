@@ -1,17 +1,5 @@
 $(document).ready(function() {
 
-   //Боковое выезжающее меню
-   $('.main-nav__toggle').on('click', function () {
-      $('.main-nav').toggleClass('main-nav--opened');
-      $('.home-page').toggleClass('home-page--active');
-   });
-
-   $('.main-nav__toggle-arrow').on('click', function () {
-      $('.main-nav').toggleClass('main-nav--opened');
-      $('.home-page').toggleClass('home-page--active');
-   });
-
-
    // Максимальная ширина item
    function getSize() {
       const itemMinWidth = 340;
@@ -28,7 +16,22 @@ $(document).ready(function() {
    $(window).resize(getSize);
 
 
-   // Показать/скрыть federal-projects__users-list
+    //Боковое выезжающее меню
+    $('.main-nav__toggle').on('click', function () {
+        $('.main-nav').toggleClass('main-nav--opened');
+        $('.home-page').toggleClass('home-page--active');
+        getSize();
+    });
+
+    $('.main-nav__toggle-arrow').on('click', function () {
+        $('.main-nav').toggleClass('main-nav--opened');
+        $('.home-page').toggleClass('home-page--active');
+        getSize();
+    });
+
+
+
+    // Показать/скрыть federal-projects__users-list
    $('.federal-projects__users-btn').on('click', function () {
       $('.federal-projects__users-wrap').toggleClass('federal-projects__users-wrap--hidden');
       $(this).text($(this).text() == 'развернуть' ? 'свернуть' : 'развернуть');
