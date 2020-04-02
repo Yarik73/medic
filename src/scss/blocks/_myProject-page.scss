@@ -57,6 +57,7 @@
   background-color: $white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  cursor: pointer;
   //test
   height: 205px;
 
@@ -114,3 +115,171 @@
   line-height: 18px;
   color: #535353;
 }
+
+.myProject-page__detail {
+  background: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.myProject-page__detail-head {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba($black, 0.1);
+}
+
+.myProject-page__detail-close {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  font-size: 0;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.myProject-page__detail-body {
+  padding: 30px;
+  display: flex;
+}
+
+.myProject-page__detail-left {
+  width: 33.333%;
+}
+
+.myProject-page__detail-leftHead {
+  margin-bottom: 30px;
+  font-family: "DIN Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 42px;
+  color: $black;
+}
+
+.myProject-page__detail-leftHead span {
+  display: inline-block;
+  width: 100px;
+}
+
+.myProject-page__detail-wrap {
+  display: flex;
+}
+
+.myProject-page__detail-users {
+  margin-right: 100px;
+}
+
+.myProject-page__detail-leftTextDown {
+  margin-bottom: 20px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: $black;
+}
+
+.myProject-page__detail-leftTextUp {
+  margin-bottom: 6px;
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+  opacity: 0.7;
+}
+
+.myProject-page__detail-link {
+  position: relative;
+  left: 25px;
+  margin-bottom: 30px;
+  padding: 0;
+  display: block;
+  font-size: 14px;
+  line-height: 19px;
+  color: $blue;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: -25px;
+    width: 12px;
+    height: 15px;
+    background: url("../img/passport.svg") no-repeat center center;
+  }
+}
+
+.myProject-page__detail-right {
+  width: 66.6666%;
+}
+
+.myProject-page__detail-list li {
+  border-bottom: 1px solid rgba($black, 0.2);
+}
+
+.myProject-page__detail-item {
+  font-family: "DIN", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black;
+}
+
+.myProject-page__detail-item span {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4D4D4D;
+  opacity: 0.5;
+}
+
+.myProject-page__detail-item {
+  padding: 12px 0;
+  width: 100%;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    border: 2px solid rgba($black, 0.2);
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-135deg);
+  }
+}
+

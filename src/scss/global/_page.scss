@@ -42,3 +42,13 @@ h3 {
   line-height: 28px;
   color: $black;
 }
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}

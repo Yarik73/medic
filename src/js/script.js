@@ -20,13 +20,13 @@ $(document).ready(function() {
     $('.main-nav__toggle').on('click', function () {
         $('.main-nav').toggleClass('main-nav--opened');
         $('.home-page').toggleClass('home-page--active');
-        getSize();
+        setTimeout(getSize, 200);
     });
 
     $('.main-nav__toggle-arrow').on('click', function () {
         $('.main-nav').toggleClass('main-nav--opened');
         $('.home-page').toggleClass('home-page--active');
-        getSize();
+        setTimeout(getSize, 200);
     });
 
 
@@ -44,7 +44,7 @@ $(document).ready(function() {
    });
 
 
-   //Табы
+   // federal-projects__tabs
    let tab = $('#tabs .federal-projects__tabs-body > div');
    tab.hide().filter(':first').show();
 
@@ -56,6 +56,16 @@ $(document).ready(function() {
       $(this).addClass('active');
       return false;
    }).filter(':first').click();
+
+
+   // show myProject-page__item
+    $('.myProject-page__item').on('click', function () {
+       $('.myProject-page__detail').removeClass('hidden');
+    });
+
+    $('.myProject-page__detail-close').on('click', function () {
+        $('.myProject-page__detail').addClass('hidden');
+    });
 
 
    // Слайдер
