@@ -20,13 +20,13 @@ $(document).ready(function() {
     $('.main-nav__toggle').on('click', function () {
         $('.main-nav').toggleClass('main-nav--opened');
         $('.home-page').toggleClass('home-page--active');
-        setTimeout(getSize, 200);
+        setTimeout(getSize, 210);
     });
 
     $('.main-nav__toggle-arrow').on('click', function () {
         $('.main-nav').toggleClass('main-nav--opened');
         $('.home-page').toggleClass('home-page--active');
-        setTimeout(getSize, 200);
+        setTimeout(getSize, 210);
     });
 
 
@@ -58,14 +58,16 @@ $(document).ready(function() {
    }).filter(':first').click();
 
 
-   // show myProject-page__item
+   // show myProject-page__item-detail
     $('.myProject-page__item').on('click', function () {
-       $('.myProject-page__detail').removeClass('hidden');
+        $('.myProject-page__detail').removeClass('hidden');
     });
 
     $('.myProject-page__detail-close').on('click', function () {
         $('.myProject-page__detail').addClass('hidden');
     });
+
+    
 
 
    // Слайдер
