@@ -59,46 +59,32 @@ $(document).ready(function() {
 
 
    // show myProject-page__item Detail
-    //  $('.myProject-page__item').on('click', function() {
-    //      let k = $(this).attr('data-card');
+     $('.myProject-page__item').on('click', function() {
+         let k = $(this).attr('data-card');
+
+         $('#' + k).removeClass('hidden')
+     });
+
+    // function showDetail() {
+    //     const ItemList = $('.myProject-page__list');
     //
-    //      $('#' + k).removeClass('hidden')
-    //  });
+    //     ItemList.on('click', function(e) {
+    //         e.preventDefault();
+    //         if(e.target.className == 'myProject-page__item') {
+    //             const block = e.target.attr('data-card');
+    //             console.log(block);
+    //
+    //             const box = $('#' + block);
+    //             box.removeClass('hidden');
+    //         } else if (e.target.className == 'myProject-page__detail-close') {
+    //             console.log(e.target.parentNode).toggleClass('hidden');
+    //             $(e.target.parentNode.parentNode).toggleClass('hidden');
+    //         }
+    //
+    //     })
+    // }
+    // showDetail();
 
-    function showDetail() {
-        const ItemList = $('.myProject-page__list');
-
-        ItemList.on('click', function(e) {
-            e.preventDefault();
-            if(e.target.className == 'myProject-page__item') {
-                const block = e.target.attr('data-card');
-                console.log(block);
-
-                const box = $('#' + block);
-                box.removeClass('hidden');
-            } else if (e.target.className == 'myProject-page__detail-close') {
-                console.log(e.target.parentNode).toggleClass('hidden');
-                $(e.target.parentNode.parentNode).toggleClass('hidden');
-            }
-
-        })
-    }
-    showDetail();
-
-
-    // var k = document.querySelector('.myProject-page__list');
-    // k.addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     if(e.target.className == 'myProject-page__item') {
-    //         let block = e.target.getAttribute('data-card');
-    //         console.log(block);
-    //         let box = document.querySelector('#' + block);
-    //         box.classList.remove('hidden');
-    //     } else if(e.target.className == 'myProject-page__detail-close') {
-    //         console.log(e.target.parentNode.parentNode);
-    //         $(e.target.parentNode.parentNode).toggleClass('hidden');
-    //     }
-    // });
 
     // function showDetail() {
     //     const itemInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
@@ -108,8 +94,6 @@ $(document).ready(function() {
     //     });
     // }
     // showDetail();
-
-
 
 
    // Слайдер
