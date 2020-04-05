@@ -59,31 +59,11 @@ $(document).ready(function() {
 
 
    // show myProject-page__item Detail
-     $('.myProject-page__item').on('click', function() {
-         let k = $(this).attr('data-card');
+    $('.myProject-page__item').on('click', function() {
+        let k = $(this).attr('data-card');
 
-         $('#' + k).removeClass('hidden')
-     });
-
-    // function showDetail() {
-    //     const ItemList = $('.myProject-page__list');
-    //
-    //     ItemList.on('click', function(e) {
-    //         e.preventDefault();
-    //         if(e.target.className == 'myProject-page__item') {
-    //             const block = e.target.attr('data-card');
-    //             console.log(block);
-    //
-    //             const box = $('#' + block);
-    //             box.removeClass('hidden');
-    //         } else if (e.target.className == 'myProject-page__detail-close') {
-    //             console.log(e.target.parentNode).toggleClass('hidden');
-    //             $(e.target.parentNode.parentNode).toggleClass('hidden');
-    //         }
-    //
-    //     })
-    // }
-    // showDetail();
+        $('#' + k).addClass('myProject-page__detail--active').siblings('.myProject-page__detail').removeClass('myProject-page__detail--active');
+    });
 
 
     // function showDetail() {
