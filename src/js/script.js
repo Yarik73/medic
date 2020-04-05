@@ -65,6 +65,12 @@ $(document).ready(function() {
         $('#' + k).addClass('myProject-page__detail--active').siblings('.myProject-page__detail').removeClass('myProject-page__detail--active');
     });
 
+    $('.myProject-page__detail').on('click', function() {
+        if($(this).hasClass('myProject-page__detail--active')) {
+            $(this).removeClass('myProject-page__detail--active');
+        }
+    });
+
 
     // function showDetail() {
     //     const itemInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
