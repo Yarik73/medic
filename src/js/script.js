@@ -61,7 +61,11 @@ $(document).ready(function() {
    // show myProject-page__item Detail
     $('.myProject-page__item').on('click', function() {
        let k = $(this).attr('data-card');
-       $('#' + k).removeClass('hidden');
+       $('#' + k).toggleClass('hidden');
+    });
+
+    $('.myProject-page__detail').on('click', function () {
+       $(this).addClass('hidden')
     });
 
     function showDetail() {
