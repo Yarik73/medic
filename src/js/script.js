@@ -58,16 +58,20 @@ $(document).ready(function() {
    }).filter(':first').click();
 
 
-   // show myProject-page__item Detail
-    $('.myProject-page__item').on('click', function() {
-       let k = $(this).attr('data-card');
-       $('#' + k).toggleClass('hidden');
-    });
+   // show myProject-page__item-Detail
 
-    $('.myProject-page__detail').on('click', function () {
-       $(this).addClass('hidden')
-    });
-
+    // $('.myProject-page__item').on('click', function(e) {
+    //    const dataAttr = $(this).attr('data-card');
+    //    const itemDetail = $('#' + dataAttr);
+    //    const target = $(this.target);
+    //
+    //    if ( itemDetail.hasClass('hidden') ) {
+    //        itemDetail.removeClass('hidden')
+    //    } else {
+    //        itemDetail.addClass('hidden')
+    //    }
+    // });
+    //
     // function showDetail() {
     //     const itemInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
     //
