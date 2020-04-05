@@ -34,7 +34,7 @@ $(document).ready(function() {
     // Показать/скрыть federal-projects__users-list
    $('.federal-projects__users-btn').on('click', function () {
       $('.federal-projects__users-wrap').toggleClass('federal-projects__users-wrap--hidden');
-      $(this).text($(this).text() == 'развернуть' ? 'свернуть' : 'развернуть');
+      $(this).text($(this).text() === 'развернуть' ? 'свернуть' : 'развернуть');
    });
 
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
         $('.myProject-page__detail').addClass('hidden');
     });
 
-    
+
 
 
    // Слайдер

@@ -40,13 +40,13 @@
 }
 
 .myProject-page__list {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin-right: -20px;
 }
 
 .myProject-page__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -60,6 +60,22 @@
   cursor: pointer;
   //test
   height: 205px;
+
+  &:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(136, 186, 230, 0.18);
+    border-radius: 5px;
+    transition: all 2s ease;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
 }
 
 .myProject-page__number {
@@ -101,9 +117,6 @@
 }
 
 .myProject-page__detail {
-  position: absolute;
-  left: 0;
-  top: 225px;
   width: calc(100% - 20px);
   background: $white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
