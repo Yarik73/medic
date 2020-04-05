@@ -67,6 +67,10 @@ $(document).ready(function() {
         $('.myProject-page__detail').addClass('hidden');
     });
 
+    $('.myProject-page__item').each(function (i, el) {
+        ($(this).css('order', i + 1))
+    });
+
 
 
 
