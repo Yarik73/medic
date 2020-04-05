@@ -60,7 +60,7 @@ $(document).ready(function() {
 
    // show myProject-page__item Detail
     $('.myProject-page__item').on('click', function() {
-       let k = $(this).attr('data');
+       let k = $(this).attr('data-card');
        $('#' + k).removeClass('hidden');
     });
 
