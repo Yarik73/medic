@@ -68,14 +68,14 @@ $(document).ready(function() {
        $(this).addClass('hidden')
     });
 
-    function showDetail() {
-        const itemInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
-
-        $('.myProject-page__item').each(function (i, el) {
-            ($(this).css('order', i + 1))
-        });
-    }
-    showDetail();
+    // function showDetail() {
+    //     const itemInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
+    //
+    //     $('.myProject-page__item').each(function (i, el) {
+    //         ($(this).css('order', i + 1))
+    //     });
+    // }
+    // showDetail();
 
 
 
