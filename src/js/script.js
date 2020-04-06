@@ -63,23 +63,22 @@ $(document).ready(function() {
         let k = $(this).attr('data-card');
 
         $('#' + k).addClass('myProject-page__detail--active').siblings('.myProject-page__detail').removeClass('myProject-page__detail--active');
+
+        $('.myProject-page__item').each(function (i, el) {
+            ($(this).css('order', i))
+        });
+
+        const itemsInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
+        const numLine = Math.ceil($(this).index() / itemsInLine);
+
+        $('.myProject-page__detail--active').css('order', itemsInLine * numLine);
     });
 
-    $('.myProject-page__detail').on('click', function() {
-        if($(this).hasClass('myProject-page__detail--active')) {
-            $(this).removeClass('myProject-page__detail--active');
+    $('.myProject-page__detail-close').on('click', function() {
+        if($('.myProject-page__detail').hasClass('myProject-page__detail--active')) {
+            $('.myProject-page__detail').removeClass('myProject-page__detail--active');
         }
     });
-
-
-    // function showDetail() {
-    //     const itemInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
-    //
-    //     $('.myProject-page__item').each(function (i, el) {
-    //         ($(this).css('order', i + 1))
-    //     });
-    // }
-    // showDetail();
 
 
    // Слайдер
