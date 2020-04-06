@@ -65,20 +65,17 @@ $(document).ready(function() {
         $('#' + k).addClass('myProject-page__detail--active').siblings('.myProject-page__detail').removeClass('myProject-page__detail--active');
 
         $('.myProject-page__item').each(function (i, el) {
-            ($(this).css('order', i))
+            ($(this).css('order', i + 1))
         });
 
         const itemsInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
-        let numLine = Math.ceil($(this).index() / itemsInLine);
-        console.log(numLine);
+        const numLine = Math.ceil(($(this).index() + 1) / itemsInLine);
 
-        $('.myProject-page__detail--active').css('order', itemsInLine * numLine - 1);
+        $('.myProject-page__detail--active').css('order', itemsInLine * numLine);
     });
 
     $('.myProject-page__detail-close').on('click', function() {
-        if($('.myProject-page__detail').hasClass('myProject-page__detail--active')) {
-            $('.myProject-page__detail').removeClass('myProject-page__detail--active');
-        }
+        $('.myProject-page__detail').removeClass('myProject-page__detail--active');
     });
 
 
