@@ -69,9 +69,10 @@ $(document).ready(function() {
         });
 
         const itemsInLine = Math.floor($('.myProject-page__list').width() / $('.myProject-page__item').width());
-        const numLine = Math.ceil($(this).index() / itemsInLine);
+        let numLine = Math.ceil($(this).index() / itemsInLine);
+        console.log(numLine);
 
-        $('.myProject-page__detail--active').css('order', itemsInLine * numLine);
+        $('.myProject-page__detail--active').css('order', itemsInLine * numLine - 1);
     });
 
     $('.myProject-page__detail-close').on('click', function() {
